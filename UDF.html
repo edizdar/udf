@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="all.min.css" rel="stylesheet">
+    <link href="Main.css" rel="stylesheet">
+    <link href="animated.css" rel="stylesheet">
+    <title>UDF Dosya Dönüştürücü</title>
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .converter {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #dc3545;
+        }
+
+        .borderContainer {
+            border: 2px dashed #007bff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .uploadIcon {
+            margin-top: 10px;
+            width: 50px; /* İkonun boyutu */
+            height: 50px; /* İkonun boyutu */
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        #messageBoxResult {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="converter">
+            <div class="text-center" id="converter-description">
+                <h3>UDF Dosya Dönüştürücü</h3>
+                <p>Excel, Word, PDF ve JPG/PNG formatındaki dosyalarınızı, UYAP Döküman Editörü tarafından kullanılmakta olan UDF formatına ücretsiz olarak dönüştürebilirsiniz.</p>
+            </div>
+
+            <div class="text-center">
+                <p>Dönüştürmek istediğiniz dosyayı aşağıdaki alana sürükleyin ya da "Dosya Seç" butonuna tıklayarak seçin.</p>
+            </div>
+
+            <div class="borderContainer">
+                <input type="file" id="convertUDFFile" name="converterFile" class="form-control mt-2">
+                <img src="uploadIcon.svg" class="uploadIcon" alt="Dosya Yükle">
+            </div>
+
+            <div class="text-center" id="converterButtons">
+                <input type="submit" id="convertUDFButton" class="btn btn-success mt-2" value="Dönüştür">
+            </div>
+
+            <div align="center">
+                <div id="messageBoxResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.0.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="all.min.js"></script>
+    <script src="MessageBox.js"></script>
+    <script src="forUDFUpload.js"></script>
+    <script src="Main.js"></script>
+</body>
+
+</html>
